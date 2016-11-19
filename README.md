@@ -7,31 +7,13 @@ Is a group of functions to do **functional programming** faster and in a more co
 `$ npm install fp-array`
 
 ## Usage
-#### `filter()`
-```javascript
-const filter = require('fp-array').filter
-const arr = [1, 'a', true, 6, 0, 4, undefined, 10]
-...
-
-filter(arr)
-  .is(number)
-  .and(even)
-  .and(greaterThan4)
-  .result() // [6, 10]
-
-arr // [1, 'a', true, 6, 0, 4, undefined, 10]
-```
-#### Advantages
-- Speed : Iterates only **one time** over `arr` if we use `Array.prototype.filter()` we
-could end with 3 iterations on 3 arrays to get the **same result** unless you made a new function composed of this 3
-- **Functional**: `arr` has not mutated
-- **Declarative**: Easy to read syntax   
-
-#### `map()`
+#### `#map()`
 ```javascript
 const map = require('fp-array').map
 const arr = [1, 2, 3]
-...
+// callbacks
+const increment = n => n + 1
+const double = n => n * 2
 
 map(arr)
   .with(increment)
@@ -40,5 +22,27 @@ map(arr)
   .result() // ['4', '6', '8']
 
 arr // [1, 2, 3]
+```
+#### Notes
+- Iterates only **one time** over `arr`
+- **Inmutable**: `arr` has not mutated, a new Array is returned when `result()`
+- **Declarative**: Easy to read syntax
+
+#### `#filter()`
+```javascript
+const filter = require('fp-array').filter
+const arr = [1, 'a', true, 6, 0, 4, undefined, 10]
+
+const number = n => typeof n === 'number'
+const greaterThan4 = n => n > 4
+const even = n => n % 2 === 0
+
+filter(arr)
+  .is(number)
+  .and(even)
+  .and(greaterThan4)
+  .result() // [6, 10]
+
+arr // [1, 'a', true, 6, 0, 4, undefined, 10]
 ```
 Same advantages than before.
