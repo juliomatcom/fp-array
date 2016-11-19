@@ -11,6 +11,7 @@ Is a group of functions to do **functional programming** faster and in a more co
 ```javascript
 const filter = require('fp-array').filter
 const arr = [1, 'a', true, 6, 0, 4, undefined, 10]
+...
 
 filter(arr)
   .is(number)
@@ -21,7 +22,8 @@ filter(arr)
 arr // [1, 'a', true, 6, 0, 4, undefined, 10]
 ```
 #### Advantages
-- Speed : Iterates only **one time** over `arr`, If we were using map we get 3 `map()` in 3 different arrays and 3 iterations to get the same result
+- Speed : Iterates only **one time** over `arr` if we use `Array.prototype.filter()` we
+could end with 3 iterations on 3 arrays to get the **same result** unless you made a new function composed of this 3
 - **Functional**: `arr` has not mutated
 - **Declarative**: Easy to read syntax   
 
@@ -29,6 +31,7 @@ arr // [1, 'a', true, 6, 0, 4, undefined, 10]
 ```javascript
 const map = require('fp-array').map
 const arr = [1, 2, 3]
+...
 
 map(arr)
   .with(increment)
