@@ -1,6 +1,8 @@
 # fp-array
 Is a group of functions to do **functional programming** faster and in a more convenient way than in `Array.prototype`
 
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+
 ## Installation
 `$ npm install fp-array`
 
