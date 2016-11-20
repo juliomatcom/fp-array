@@ -75,10 +75,12 @@ reduce(
   5
 ) // 11
 ```
-`reduce()` works exactly like the original except now is outside the `Array.prototype`
+`reduce()` works exactly like the original except now is outside the `Array.prototype`  
+
+More examples in [tests](test/test.js).
 
 #### Have any idea ?
-Say hi on twitter: [@juliomatcom](https://twitter.com/juliomatcom)
+Open an issue or say hi on twitter: [@juliomatcom](https://twitter.com/juliomatcom)
 
 #### MIT Licensed
 Copyright (c) 2016 Julio César Martín
