@@ -3,6 +3,7 @@ const assert = require('assert')
 const fpArray = require('../lib/index')
 const filter = fpArray.filter
 const map = fpArray.map
+const reduce = fpArray.reduce
 
 describe('fp-array', function () {
   describe('#filter()', function () {
@@ -98,6 +99,35 @@ describe('fp-array', function () {
         .result()
       const expected = ['4', '6', '8']
       assert.deepStrictEqual(actual, expected)
+    })
+  })
+
+  describe('#reduce()', function () {
+    it('should be defined', function () {
+      const actual = typeof reduce
+      const expected = 'function'
+      assert.deepEqual(actual, expected)
+    })
+
+    it('should work without initial value', function () {
+      const arr = [1, 2, 3]
+      const actual = reduce(
+        arr,
+        (acc, currentValue) => acc + currentValue
+      )
+      const expected = 6
+      assert.strictEqual(actual, expected)
+    })
+
+    it('should allow an initial value', function () {
+      const arr = [1, 2, 3]
+      const actual = reduce(
+        arr,
+        (acc, currentValue) => acc + currentValue,
+        5
+      )
+      const expected = 11
+      assert.strictEqual(actual, expected)
     })
   })
 })
