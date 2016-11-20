@@ -12,7 +12,8 @@
     "functional",
     "programming",
     "map",
-    "filter"
+    "filter",
+    "reduce"
   ],
   "author": "juliomatcom",
   "license": "MIT",
