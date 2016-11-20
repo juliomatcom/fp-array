@@ -1,7 +1,7 @@
 {
   "name": "fp-array",
   "version": "1.0.0",
-  "description": "A more convenient methods for functional programming with Array in Javascript",
+  "description": "More declarative and convenient functions than in Array.prototype",
   "main": "lib/index.js",
   "scripts": {
     "test": "standard && ./node_modules/mocha/bin/mocha"
@@ -15,7 +15,7 @@
     "filter"
   ],
   "author": "juliomatcom",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "standard": "*",
     "mocha": "^3.1.2"
