@@ -7,7 +7,8 @@
 `$ npm install fp-array`
 
 ## Syntax
-```Javascript
+
+```javascript
 const map = require('fp-array').map
 const filter = require('fp-array').filter
 const reduce = require('fp-array').reduce
@@ -27,6 +28,7 @@ filter(arr)
 
 reduce(arr, callback[, initialValue])
 ```
+
 ### Examples
 #### `#map()`
 ```javascript
