@@ -1,15 +1,35 @@
 # fp-array
-Is a group of functions to do **functional programming** faster and in a more convenient way than in `Array.prototype`
+`fp-array` is a group of functions to do **declarative programming** in a more convenient way than in `Array.prototype`
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Installation
 `$ npm install fp-array`
 
-## Usage
+## Syntax
+```Javascript
+const map = require('fp-array').map
+const filter = require('fp-array').filter
+const reduce = require('fp-array').reduce
+const arr = [...]
+
+map(arr)
+  .with(callback)
+  [.and(callback2)]
+  [...]
+  .result()
+
+filter(arr)
+  .is(callback)
+  [.and(callback2)]
+  [...]
+  .result()
+
+reduce(arr, callback[, initialValue])
+```
+### Examples
 #### `#map()`
 ```javascript
-const map = require('fp-array').map
 const arr = [1, 2, 3]
 // callbacks
 const increment = n => n + 1
@@ -30,7 +50,6 @@ arr // [1, 2, 3]
 
 #### `#filter()`
 ```javascript
-const filter = require('fp-array').filter
 const arr = [1, 'a', true, 6, 0, 4, undefined, 10]
 
 const number = n => typeof n === 'number'
@@ -45,4 +64,21 @@ filter(arr)
 
 arr // [1, 'a', true, 6, 0, 4, undefined, 10]
 ```
-Same advantages than before.
+Same notes than before applies.
+
+#### `#reduce()`
+```javascript
+const arr = [1, 2, 3]
+reduce(
+  arr,
+  (acc, currentValue) => acc + currentValue,
+  5
+) // 11
+```
+`reduce()` works exactly like the original except now is outside the `Array.prototype`
+
+#### Have any idea ?
+Say hi on twitter: [@juliomatcom](https://twitter.com/juliomatcom)
+
+#### MIT Licensed
+Copyright (c) 2016 Julio César Martín
