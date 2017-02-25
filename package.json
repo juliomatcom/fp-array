@@ -1,6 +1,6 @@
 {
   "name": "fp-array",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "More declarative and convenient functions than in Array.prototype",
   "main": "lib/index.js",
   "scripts": {
