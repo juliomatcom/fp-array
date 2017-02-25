@@ -1,6 +1,7 @@
 # fp-array
 `fp-array` is a group of functions to do **declarative programming** in a more convenient way than in `Array.prototype`
 
+[![Build Status](https://travis-ci.org/juliomatcom/fp-array.svg?branch=master)](https://travis-ci.org/juliomatcom/fp-array) 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Installation
