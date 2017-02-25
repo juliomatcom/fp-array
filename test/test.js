@@ -1,3 +1,4 @@
+'use strict'
 /* global it, describe */
 const assert = require('assert')
 const fpArray = require('../lib/index')
